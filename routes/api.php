@@ -27,4 +27,5 @@ Route::get('/followers', 'App\Http\Controllers\APIController@allfollowers');
 Route::get('/followers/list/{userid}', 'App\Http\Controllers\APIController@followers');
 Route::get('/followers/common/{userids}', 'App\Http\Controllers\APIController@common')->where('userids', '.*');
 Route::get('/posts/unread/{userid}', 'App\Http\Controllers\APIController@unread');
+Route::get('/posts/unread/{userid}/follower/{followerid}', 'App\Http\Controllers\APIController@unreadFollower');
 

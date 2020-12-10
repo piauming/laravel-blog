@@ -132,4 +132,36 @@ class APIController extends Controller
 
         return $result;
     }
+
+    public function unreadFollower($userid, $followerid) {
+        $user = User::find($userid);
+        $follower = User::find($followerid);
+
+        if ($user == NULL or $follower == NULL) {
+
+            $error = array(
+                'status' => 'error',
+                'message' => 'resource not found'
+            );
+            return Response::json($error, 401);
+        } 
+
+        $posts = DB::table('posts')
+        ->leftJoin('read_posts', function($join) use ($userid) {
+                        $join->on('posts.id', '=', 'read_posts.post_id');
+                        $join->on('read_posts.user_id','=', DB::raw($userid));
+                    })
+        ->where('read_posts.post_id', '=', NULL)
+        ->where('posts.user_id', '<>', DB::raw($userid))
+        ->where('posts.user_id', '=', DB::raw($followerid))
+        ->get()->pluck('body');
+
+        $result = array();
+        $result["success"] = true;
+        $result["posts"] = $posts;
+        $result["count"] = count($posts);
+
+        return $result;
+
+    }
 }
