@@ -1515,3 +1515,15 @@
 127.0.0.1 - - [11/Dec/2020:07:47:02 +0800] "GET /api/posts/unread/1/follower/3 HTTP/1.1" 200 50
 127.0.0.1 - - [11/Dec/2020:07:47:05 +0800] "GET /api/posts/unread/1/follower/6 HTTP/1.1" 401 49
 127.0.0.1 - - [11/Dec/2020:07:47:15 +0800] "GET /api/posts/unread/1 HTTP/1.1" 200 73
+127.0.0.1 - - [11/Dec/2020:09:02:09 +0800] "GET /api/posts/unread/1 HTTP/1.1" 200 73
+127.0.0.1 - - [11/Dec/2020:09:02:17 +0800] "GET /api/posts/unread/1/follower/2 HTTP/1.1" 200 59
+127.0.0.1 - - [11/Dec/2020:09:02:23 +0800] "GET /api/posts/unread/1/follower/3 HTTP/1.1" 401 49
+127.0.0.1 - - [11/Dec/2020:09:03:04 +0800] "GET /api/posts/unread/1/follower/2 HTTP/1.1" 200 59
+127.0.0.1 - - [11/Dec/2020:09:03:08 +0800] "GET /api/posts/unread/1/follower/3 HTTP/1.1" 401 49
+127.0.0.1 - - [11/Dec/2020:09:04:05 +0800] "GET /api/posts/unread/1/follower/3 HTTP/1.1" 200 16714
+127.0.0.1 - - [11/Dec/2020:09:04:08 +0800] "GET /api/posts/unread/1/follower/2 HTTP/1.1" 200 17448
+127.0.0.1 - - [11/Dec/2020:09:04:35 +0800] "GET /api/posts/unread/1/follower/3 HTTP/1.1" 200 17450
+127.0.0.1 - - [11/Dec/2020:09:04:44 +0800] "GET /api/posts/unread/1/follower/3 HTTP/1.1" 200 50
+127.0.0.1 - - [11/Dec/2020:09:04:47 +0800] "GET /api/posts/unread/1/follower/2 HTTP/1.1" 401 49
+127.0.0.1 - - [11/Dec/2020:09:04:50 +0800] "GET /api/posts/unread/1/follower/1 HTTP/1.1" 401 49
+127.0.0.1 - - [11/Dec/2020:09:04:52 +0800] "GET /api/posts/unread/1/follower/3 HTTP/1.1" 200 50

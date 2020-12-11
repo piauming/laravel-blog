@@ -135,7 +135,10 @@ class APIController extends Controller
 
     public function unreadFollower($userid, $followerid) {
         $user = User::find($userid);
-        $follower = User::find($followerid);
+        
+        $follower = DB::table('followers')
+                ->where('user_id', '=', $userid)
+                ->where('follower_id', '=', $followerid)->first();      
 
         if ($user == NULL or $follower == NULL) {
 
